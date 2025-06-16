@@ -1,0 +1,37 @@
+{
+  "timer": {
+    "days": 12,
+    "hours": 45,
+    "minutes": 20
+  },
+  "challenges": [
+    {
+      "title": "Web Development Challenge",
+      "description": "Create a responsive website for Plato restaurant.",
+      "requirements": [
+        {
+          "title": "Logo Design Challenge",
+          "description": "Create a logo for Plato."
+        }
+      ],
+      "deliverables": [
+        "PNG file of the logo",
+        "Social media posts"
+      ]
+    },
+    {
+      "title": "AI Challenge",
+      "description": "Create a promotional video for Pista restaurant.",
+      "requirements": [
+        {
+          "title": "Logo Design Challenge",
+          "description": "Design a logo for Pista."
+        }
+      ],
+      "deliverables": [
+        "High-res PNG logo",
+        "Video link"
+      ]
+    }
+  ]
+}

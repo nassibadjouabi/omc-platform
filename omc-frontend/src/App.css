@@ -1,0 +1,253 @@
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap');
+@import url('./index.css'); /* Import des variables de index.css */
+
+/* Variables CSS */
+:root {
+  --font-urbanist: 'Urbanist', sans-serif;
+  --dark-bg: #0A0A0F;
+  --card-bg: rgba(13, 13, 24, 0.95);
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --primary-blue: rgba(77, 118, 244, 0.9);
+  --bg-color: #0A0A0F; /* Dark background color */
+  --gradient-bg: linear-gradient(-45deg, var(--blue-gradient-1), var(--blue-gradient-2));
+}
+#root {
+  background: rgb(13,13,13);
+  background: linear-gradient(16deg, rgba(13,13,13,1) 0%, rgba(66,106,225,1) 100%);
+  min-height: 100vh;
+  color: var(--text-primary);
+}
+
+/* Styles de base */
+body {
+  margin: 0;
+  font-family: var(--font-urbanist), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  background: var(--gradient-bg);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Styles de l'en-tête */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+
+
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+  
+}
+
+.nav-item {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.challenge-content {
+  margin-top: 177px; /* Position à 177px du haut */
+  margin-left: 115px; /* Position à 115px de la gauche */
+  margin-right: 115px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Espace de 30px entre les éléments enfants */
+  margin-top: 3rem; /* Espace entre la Navbar et le contenu */
+}
+
+/* Styles du timer */
+.timer-display {
+  background: var(--primary-blue);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  float: right;
+}
+
+.timer-display span {
+  font-size: 0.9rem;
+}
+
+/* Styles de la section d'en-tête de la page */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title-section {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin: 0 0 1rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.page-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Styles de la carte de défi */
+.challenge-card {
+  background: rgb(13,13,13);
+  background: linear-gradient(16deg, rgba(13,13,13,1) 0%, rgba(25,39,83,1) 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: var(--text-primary); /* Assurez-vous que le texte est lisible */
+}
+
+.challenge-title {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.challenge-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+/* Styles de la section des exigences */
+.requirements-section {
+  background-color: rgba(42, 42, 42, 0.9);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.requirement-item {
+  margin-bottom: 1.5rem;
+}
+
+.requirement-title {
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.requirement-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.deliverables-list {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  list-style-type: none;
+}
+
+.deliverables-list li {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.deliverables-list li::before {
+  content: "•";
+  position: absolute;
+  left: -1.5rem;
+  color: var(--text-secondary);
+}
+
+/* Styles du bouton de soumission */
+.submit-button {
+  background: var(--primary-blue);
+  color: var(--text-primary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s ease;
+  width: 200px; /* Largeur fixe */
+  height: 40px; 
+}
+
+.submit-button:hover {
+  opacity: 0.9;
+}
+
+/* Styles responsives */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .challenge-card,
+  .requirements-section {
+    padding: 1.5rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .timer-display {
+    font-size: 0.8rem;
+  }
+}
+
+/* Animation du dégradé */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
